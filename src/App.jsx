@@ -8,27 +8,24 @@ import FourthComponent from './components/FourthComponent'
 import './App.css'
 
 function App() {
-  const [name, setName] = useState("Carlos Alvarado")
+
+  const [name, setName] = useState("Wendy Katherinne Gomez Villa");
 
   return (
-    <>
-    <div>
-    <h1>Fundamentos de React!</h1>
-    <MyThirthComponent 
-    name = "Ines"
-    last_name="Oliveros"
-    age="20"
-    />
-    <hr />
-    <Child 
-    name= {name}
-    setName={setName}/>
-    <hr />
-  </div>
-  <FourthComponent/>
-  </>
+    <div className="App">
+      <header className="App-header">
+        <hr className='white-hr'/>
+        <FourthComponent />
+        <hr className='white-hr'/>
+        <Child
+          name={name}
+          setName={setName}
+        />
+        <hr className='white-hr'/>
+      </header>
+    </div>
   )
-}
+};
 
 export default App
 

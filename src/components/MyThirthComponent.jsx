@@ -1,13 +1,23 @@
-import React from 'react';
+import PropTypes from "prop-types";
 
-const MyThirthComponent = () => {
-
-    
+export const ThirdComponent = (props) => {
   return (
-    <>
- <div>Holiiiis</div>
-    </>
-  );
-};
+    <div>
+      <h1>Comunicación entre Componentes</h1>
+      <ul>
+        <li>{ props.name }</li>
+        <li>{ props.last_name }</li>
+        <li>{ props.age }</li>
+      </ul>
+    </div>
+  )
+}
 
-export default MyThirthComponent;
+
+ThirdComponent.propTypes = {
+  name: PropTypes.string,
+  last_name: PropTypes.string,
+  age: PropTypes.string
+}
+
+export default ThirdComponent
